@@ -4,6 +4,13 @@ Bu doküman, **hiçbir şey kurulu değilmiş** varsayımıyla hazırlanmıştı
 
 ---
 
+## Proje Repoları
+
+- **Frontend (React):** [Campus Market Frontend](https://github.com/YusufZiyaKural/campusMarketFrontend)
+- **Backend (Java / Spring Boot):** [Campus Market Backend](https://github.com/akkalekerem/CampusMarket)
+
+---
+
 ## Gereksinimler
 
 * Java JDK (tercihen Java 17 veya proje hangi sürümü istiyorsa)
