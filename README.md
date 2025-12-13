@@ -1,4 +1,4 @@
-# Campus Market – Kurulum Rehberi
+# Campus Market – Kurulum Rehberi 
 
 Bu doküman, **hiçbir şey kurulu değilmiş** varsayımıyla hazırlanmıştır. Adımları sırayla takip etmeniz yeterlidir.
 
