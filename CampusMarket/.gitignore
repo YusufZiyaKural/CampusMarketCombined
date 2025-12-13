@@ -1,12 +1,4 @@
 HELP.md
-# Ignore the subfolder that is already a repo (Replace with actual folder name if different)
-campusMarketFrontend/
-CampusMarket/
-
-# Standard ignores
-node_modules/
-.DS_Store
-dist/
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
