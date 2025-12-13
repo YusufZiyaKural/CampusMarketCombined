@@ -7,7 +7,7 @@ Bu doküman, **hiçbir şey kurulu değilmiş** varsayımıyla hazırlanmıştı
 ## Proje Repoları
 
 - **Frontend (React):** [Campus Market Frontend](https://github.com/YusufZiyaKural/campusMarketFrontend)
-- **Backend (Java / Spring Boot):** [Campus Market Backend](https://github.com/akkalekerem/CampusMarket)
+- **Backend (Java / Spring Boot):** [Campus Market Backend](https://github.com/YusufZiyaKural/CampusMarketBackend)
 
 ---
 
