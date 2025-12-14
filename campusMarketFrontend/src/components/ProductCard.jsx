@@ -20,9 +20,11 @@ const ProductCard = ({ product }) => {
           
           {/* Açıklamayı kartta kısa tutalım, detay modalda olsun */}
           <p className="card-desc">
-            {product.description.length > 50 
-                ? product.description.substring(0, 50) + "..." 
-                : product.description}
+              {/* YENİ KOD */}
+              {product.description ? (product.description.length > 50
+                  ? product.description.substring(0, 50) + "..."
+                  : product.description) : 'Açıklama Yok'}
+
           </p>
           
           <div className="card-footer">
