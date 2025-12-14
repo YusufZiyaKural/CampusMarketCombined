@@ -15,9 +15,6 @@ public class DataSeeder implements CommandLineRunner {
     private final UserRepository userRepository;
     private final CategoryRepository categoryRepository;
 
-    // Constructor (Kurucu Metot):
-    // Proje açılırken Spring Boot, "Senin bu repository'lere ihtiyacın var, al bunları kullan" diyerek buraya otomatik doldurur.
-    // Buna "Dependency Injection" denir.
 
     public DataSeeder(UserRepository userRepository, CategoryRepository categoryRepository) {
         this.userRepository = userRepository;

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 // @RestController: Spring'e "Bu sınıf internetten gelen isteklere (GET, POST) cevap verir" der.
-@CrossOrigin(origins = "http://localhost:5173")
-@RestController
+@CrossOrigin(origins = "http://localhost:5173")// Frontend (React) ile haberleşme izni (CORS hatasını önler).
+@RestController // Bu sınıfın bir API olduğunu ve JSON verisi döneceğini belirtir.
 @RequestMapping("/api/products")
 public class ProductController {
 
@@ -27,7 +27,7 @@ public class ProductController {
     @PostMapping
     public Product createProduct(@RequestBody Product product){
         // save() Gelen ürünü veritabanına kaydeder.
-        return productRepository.save(product);
+        return productRepository.save(product);// Veritabanına "INSERT INTO..." sorgusu atar.
     }
 
 }
