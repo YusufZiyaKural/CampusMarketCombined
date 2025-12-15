@@ -7,7 +7,7 @@ import Login from './components/Login';
 import Register from './components/Register'; // Yeni ekledik
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null); //user state ile kullanıcının giriş yapıp yapmadığını takip ediyoruz
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   
@@ -15,14 +15,14 @@ function App() {
   const [isRegistering, setIsRegistering] = useState(false); 
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('campusUser');
+    const storedUser = localStorage.getItem('campusUser');  // LocalStorage ı hatırlar
     if (storedUser) {
       setUser(JSON.parse(storedUser));
       fetchProducts();
     }
   }, []);
 
-  const fetchProducts = async () => {
+  const fetchProducts = async () => {//Ürünleri backendden çekiyoruz
     setLoading(true);
     try {
       const response = await fetch('http://localhost:8080/api/products');
@@ -37,7 +37,7 @@ function App() {
     }
   };
 
-  const handleLogin = (userData) => {
+  const handleLogin = (userData) => {//Giriş yapıldığında kullanıcı verisini alıyoruz, Ana ekran
     setUser(userData);
     localStorage.setItem('campusUser', JSON.stringify(userData));
     fetchProducts();

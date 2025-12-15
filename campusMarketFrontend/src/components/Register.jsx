@@ -11,14 +11,14 @@ const Register = ({ onSwitchToLogin }) => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  // --- GÜNCELLENEN KISIM BURASI ---
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     // Eğer değiştirilen alan 'phoneNumber' ise özel kontrol yap
     if (name === 'phoneNumber') {
       // Girilen değerin içinden RAKAM OLMAYAN her şeyi sil
-      const onlyNums = value.replace(/[^0-9]/g, '');
+      const onlyNums = value.replace(/[^0-9]/g, ''); //veritabanına temiz veri gitmesini sağlıyor
 
       // Maksimum 11 karakter sınırı (Örn: 05551234567)
       if (onlyNums.length <= 11) {

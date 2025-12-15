@@ -1,7 +1,7 @@
 // src/components/ProductCard.js
 import React, { useState } from 'react';
 import ProductModal from './ProductModal'; // Modalı içe aktardık
-
+//Her bir ürün verisini alıp görsel bir karta dönüştüren, tekrar kullanılabilir (Reusable) bir bileşendir.
 const ProductCard = ({ product }) => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal açık mı kapalı mı?
 
@@ -37,6 +37,7 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
+        {/*Karta tıklandığında detay penceresini (ProductModal) açar.*/}
       {/* Eğer state true ise Modalı Göster */}
       {isModalOpen && (
         <ProductModal 

@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 
 const Login = ({ onLogin, onSwitchToRegister }) => {
-  // DEĞİŞİKLİK 1: 'username' yerine 'email' yazdık
-  const [formData, setFormData] = useState({
+
+  const [formData, setFormData] = useState({ //Kullanıcıdan email ve şifre alır.
     email: '', 
     password: ''
   });
@@ -19,7 +19,7 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
 
     try {
       const response = await fetch('http://localhost:8080/api/auth/login', {
-        method: 'POST',
+        method: 'POST', //API'ye POST isteği atar.
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
@@ -27,9 +27,9 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
       if (response.ok) {
         const data = await response.json();
         // Backend kullanıcı bilgisini döndüğü için direkt alıyoruz
-        onLogin(data); 
+        onLogin(data);   //Başarılıysa gelen kullanıcı verisini App.js'e iletir
       } else {
-        // Backend'den gelen hatayı (Şifre yanlış vs.) okumaya çalışalım
+        // Backend'den gelen hatayı (örn: Şifre yanlış) okumaya çalışıyoruz
         const errorMessage = await response.text(); 
         setError(errorMessage || 'Kullanıcı adı veya şifre hatalı!');
       }
@@ -50,7 +50,7 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Email Adresi</label>
-            {/* DEĞİŞİKLİK 2: name="email" ve value={formData.email} yaptık */}
+            {}
             <input 
               type="email" 
               name="email" 

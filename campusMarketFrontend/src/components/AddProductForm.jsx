@@ -21,7 +21,7 @@ const AddProductForm = ({ onProductAdded, currentUser }) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // --- LOGLARI BURAYA KOYUYORUZ ---
+    // LOGLARI BURAYA KOYUYORUZ
     console.log("Forma Gelen currentUser:", currentUser);
     
     let sellerId = 1; 
@@ -55,9 +55,9 @@ const handleSubmit = async (e) => {
     };
 
     try {
-      // --- EKSİK OLAN KISIM BURASIYDI ---
+
       const response = await fetch('http://localhost:8080/api/products', {
-        method: 'POST',
+        method: 'POST', //Backend'in /api/products adresine JSON formatında veri gönderir.
         headers: {
           'Content-Type': 'application/json',
         },
@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
             title: '', description: '', price: '', imageUrl: '', categoryId: '1'
         });
 
-        // Listeyi güncellemek için üst bileşene haber ver
+        // İşlem başarılı olursa listeyi güncellemek için üst bileşene (fetchProducts) sinyal gönderir.
         if (onProductAdded) {
             onProductAdded(newProduct);
         }
